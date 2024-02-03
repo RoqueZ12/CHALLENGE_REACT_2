@@ -1,0 +1,109 @@
+// Declarando variables
+$color1: #111729;
+$color2: #1D1B48;
+$color3: #3662E3;
+$color4: #20293A;
+$color5: #364153;
+$color6: #4A5567;
+$color7: #CDD5E0;
+
+// Estilos para la sección principal
+.main-top {
+  display: grid;
+  grid-template-columns: 1fr repeat(3, 2fr); /* 4 columnas (1:2:2:2) */
+  gap: 20px; /* Espacio entre las columnas */
+  align-items: center; /* Centrar verticalmente el contenido */
+  margin-bottom: 20px;
+  width: 75%;
+  margin: auto; /* Evita la repetición de la propiedad margin */
+}
+
+// Estilos para el logo
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 10px;
+  width: 100px;
+  margin-top: -60px; 
+  margin-left: 60px;
+  z-index: 1;
+  background-color: $color4;
+}
+
+.logo-in {
+  background-color: $color1;
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  width: 95%;
+  height: auto;
+  border-radius: 50%;
+}
+
+// Estilos para la lista de usuarios
+.user-list {
+  grid-column: span 3; /* Ocupa las tres columnas restantes */
+  list-style: none;
+}
+
+.user-info {
+  padding: 0.8rem 0;
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+
+  &-li {
+    width: auto;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: $color1;
+    position: relative;
+    border: none;
+    margin-left: 2rem;
+  }
+
+  span {
+    flex: 1; /* Ocupa todo el espacio disponible */
+  }
+
+  /* Línea vertical entre spans */
+  span:first-child {
+    border-right: 1px solid #ccc;
+    padding-right: 10px;
+    margin-right: 10px; 
+    color: $color6;
+    font-weight: bold;
+  }
+  span:last-child{
+    color: $color7;
+    font-weight: bold;
+  }
+}
+
+@media (max-width:640px) {
+ .user-info{
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  width: 350px;
+  &-li{
+    margin-bottom: 1rem;
+  }
+ }
+ .logo{
+  margin-top: -200px;
+ }
+
+}

@@ -1,0 +1,119 @@
+// Declarando variables
+$color1: #111729;
+$color2: #1D1B48;
+$color3: #3662E3;
+$color4: #20293A;
+$color5: #364153;
+$color6: #4A5567;
+$color7: #CDD5E0;
+// Estilos para la sección principal del cuerpo
+.main-body {
+    padding: 20px;
+    width: 75%;
+    margin: 10px auto;
+  }
+  
+  .details {
+    margin-top: 0.6rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .details ul li {
+    display: flex;
+    align-items: center;
+    border: none;
+    margin-right: 1rem;
+  }
+  .detail-list li:last-child {
+    font-size: 0.75rem;
+  }
+  
+  // Estilos para el título principal
+  .main-title {
+    width: 75%;
+    margin: 10px auto;
+    padding: 1rem 3rem;
+    color: $color7;
+  
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    p{
+      color: $color6;
+      font-weight: bold;
+    }
+  }
+  
+  // Estilos para contenedor de tarjetas
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  // Estilos para la tarjeta
+  .card {
+    color: $color7;
+    padding: 1.5rem;
+    background: linear-gradient(to right, $color1, $color2);
+    width: 100%;
+    border-radius: 10px;
+    margin: auto;
+    cursor: pointer;
+  }
+  
+  .card h3 {
+    font-size: 1rem;
+  }
+  
+  .card p {
+    line-height: 2rem;
+    color: $color6;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+  .container-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+  }
+  .container-btn button{
+    border: none;
+    background: $color4;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    color: $color7; /* Color opcional para resaltar como enlace */
+    text-decoration: underline; /* Opcional, si deseas un subrayado */
+  
+    &:hover{
+      color: $color3;
+    }
+  }
+  .noList{
+    padding: 20px;
+    width: 75%;
+    margin: 10px auto;
+    color:$color7;
+    padding: 3rem;
+  }
+  @media (max-width:640px) {
+    .card-container{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }

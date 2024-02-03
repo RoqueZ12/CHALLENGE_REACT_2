@@ -1,0 +1,48 @@
+//declarando variables
+$color1:#111729;
+$color2: #1D1B48;
+$color3: #3662E3;
+$color4: #20293A;
+$color5: #364153;
+$color6: #4A5567;
+$color7: #CDD5E0;
+
+//ESTILOS SEARCH
+.search-container{
+  background-image: url('../assets/hero-image-github-profile.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  
+  &-form{
+    padding: 1rem 0.2rem;
+    border-radius: 10px;
+    background-color: $color4;
+    min-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50px;
+  }
+  &-input{
+    padding: 0.5rem;
+    background-color: $color4;
+    width: 75%;
+    margin-left: 0.7rem;
+    border: none;
+    color: $color7;
+  }
+  &-btn{
+    background-color: $color4;
+    border: none;
+    margin-left: -70px;
+  }
+}
+main{
+  background-color: $color4;
+}
